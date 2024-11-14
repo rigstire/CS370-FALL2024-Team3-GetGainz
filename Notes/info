@@ -1,1 +1,26 @@
-these are notes
+November 1st
+ - Researched Spring Framework 
+ - Attempted to set up Spring Framework on Intellij Community 
+ - Researched using SQLlite with Spring 
+November 2nd
+- Set up Intellij Ultimate version 
+- Set up Spring Framework
+- Successfully implemented SQL Lite
+- Set up User, Workouts, and Meal database tables
+November 4th
+- Discussed structural architecural design 
+- Decided on client-server architectural structure
+November 8th
+- Started setting up SQL with Spring
+- SQL Lite was not compatible with the framework we decided on 
+- Worked on Spring Framework code
+- Downloaded Docker to connect to mySQL database with troubleshooting
+November 9th
+- Successfully set up Docker
+- Attempted to give user permissions to mySQL
+November 11th
+- Talked about and discussed UI 
+- Designed UI screens with Figma
+November 15th 
+
+November 18th
