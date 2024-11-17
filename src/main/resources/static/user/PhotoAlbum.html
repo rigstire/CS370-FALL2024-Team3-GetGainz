@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Album</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .controls {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .album {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .photo {
+            margin: 10px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+        .photo img {
+            display: block;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .photo:hover {
+            transform: scale(1.05);
+            border-color: #333;
+        }
+        footer {
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>My Photo Album</h1>
+</header>
+
+<div class="controls">
+    <input type="file" id="photoInput" accept="image/*" />
+    <button onclick="uploadPhoto()">Upload Photo</button>
+</div>
+
+<div class="album" id="album">
+    <!-- Existing photos can be placed here -->
+    <div class="photo">
+        <img src="photo1.jpg" alt="Photo 1">
+    </div>
+    <div class="photo">
+        <img src="photo2.jpg" alt="Photo 2">
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 My Photo Album</p>
+</footer>
+
+<script>
+    function uploadPhoto() {
+        // Get the file input
+        const photoInput = document.getElementById('photoInput');
+        const file = photoInput.files[0];
+
+        // Check if a file was selected
+        if (!file) {
+            alert('Please select a photo to upload.');
+            return;
+        }
+
+        // Create a FileReader to read the selected image
+        const reader = new FileReader();
+        reader.onload = function (event) {
+            // Create a new photo div
+            const photoDiv = document.createElement('div');
+            photoDiv.className = 'photo';
+
+            // Create a new image element
+            const img = document.createElement('img');
+            img.src = event.target.result; // Set the image source to the FileReader result
+            img.alt = 'Uploaded Photo';
+
+            // Append the image to the photo div
+            photoDiv.appendChild(img);
+
+            // Append the photo div to the album
+            const album = document.getElementById('album');
+            album.appendChild(photoDiv);
+
+            // Clear the input field
+            photoInput.value = '';
+        };
+
+        // Read the selected file as a Data URL
+        reader.readAsDataURL(file);
+    }
+</script>
+</body>
+</html>
