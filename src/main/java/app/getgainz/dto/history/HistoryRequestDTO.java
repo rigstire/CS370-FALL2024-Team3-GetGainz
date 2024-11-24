@@ -5,7 +5,7 @@ import javax.validation.constraints.Positive;
 import javax.validation.constraints.PositiveOrZero;
 import javax.validation.constraints.Size;
 
-import app.getgainz.annotation.FitBuddyDate;
+import app.getgainz.annotation.GetGainzDate;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -31,7 +31,7 @@ public class HistoryRequestDTO {
 	@Positive
 	private Integer reps;
 	
-	@FitBuddyDate
+	@GetGainzDate
 	private String createdOn;
 
 }

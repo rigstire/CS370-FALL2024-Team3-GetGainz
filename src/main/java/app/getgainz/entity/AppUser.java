@@ -35,4 +35,6 @@ public class AppUser {
 	@JoinColumn(name = "role_id", referencedColumnName = "id")
 	private Role role;
 
+
+
 }

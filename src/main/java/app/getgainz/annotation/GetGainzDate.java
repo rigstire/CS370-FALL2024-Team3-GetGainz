@@ -1,6 +1,6 @@
 package app.getgainz.annotation;
 
-import app.getgainz.annotation.validator.FitBuddyDateValidator;
+import app.getgainz.annotation.validator.GetGainzDateValidator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
@@ -12,10 +12,10 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-@Constraint(validatedBy = FitBuddyDateValidator.class)
-public @interface FitBuddyDate {
+@Constraint(validatedBy = GetGainzDateValidator.class)
+public @interface GetGainzDate {
 
-	String message() default "{fitbuddy.validation.message.invaliddate}";
+	String message() default "{getgainz.validation.message.invaliddate}";
 
 	Class<?>[] groups() default { };
 

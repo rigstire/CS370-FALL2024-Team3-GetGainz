@@ -146,7 +146,26 @@
 	</div>
 </div>
 
-<!-- PhotoAlbum -->
+<!-- Photo Album -->
+<div id="PhotoAlbum" class="container-fluid" style="display: none;">
+	<div class="row justify-content-center text-center">
+		<div class="col-xl-5">
+			<div class="card">
+				<div class="card-header">Photo Album</div>
+				<div class="card-body">
+					<form id="photo-upload-form" class="d-flex mb-3">
+						<input type="file" id="fileInput" class="form-control" accept="image/*">
+						<button type="button" id="uploadButton" class="btn btn-primary ms-2">Upload</button>
+					</form>
+					<div id="album" class="d-flex flex-wrap gap-2">
+						<!-- Uploaded photos will appear here -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 
 
@@ -160,5 +179,6 @@
 <script src="/user/js/exercise.js"></script>
 <script src="/user/js/history.js"></script>
 <script src="/user/js/home.js"></script>
+<script src="/user/js/photoAlbum.js"></script>
 </body>
 </html>

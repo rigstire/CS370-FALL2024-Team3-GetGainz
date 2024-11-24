@@ -32,3 +32,12 @@ VALUES
 (2, 2, 60, 10, CURRENT_DATE()),
 (2, 2, 60, 10, CURRENT_DATE()),
 (2, 2, 60, 10, CURRENT_DATE());
+
+-- Insert default data into the photo table
+INSERT INTO photo (filename, path, upload_time, user_id)
+VALUES
+    ('fit.jpeg', '/uploads/fit.jpeg', CURRENT_TIMESTAMP, 1),
+    ('fitness.jpg', '/uploads/fitness.jpg', CURRENT_TIMESTAMP, 1);
+
+
+

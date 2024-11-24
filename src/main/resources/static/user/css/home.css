@@ -14,6 +14,35 @@
 	color: orange;
 }
 
+#PhotoAlbum {
+	display: block; /* Change this for testing */
+}
+
+#album {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	justify-content: center;
+}
+
+#album .photo {
+	width: 150px;
+	height: 150px;
+	border: 2px solid #ddd;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+#album .photo img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Ensure visibility of active sections */
+#PhotoAlbum.section-active {
+	display: block !important;
+}
 @media (max-width: 1080px) {
 .navbar-collapse
     {        

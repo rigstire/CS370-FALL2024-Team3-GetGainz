@@ -8,7 +8,7 @@ function onLoaded() {
 	showUserName();
 }
 
-function onLogout() {	
+function onLogout() {
 	window.location = "/logout";
 }
 
@@ -16,7 +16,8 @@ function onExercises() {
 	hideStatus();
 	hideDiv("History");
 	hideDiv("Account");
-	showDiv("Exercises");	
+	showDiv("Exercises");
+	hideDiv("PhotoAlbum");
 	showExercises();
 }
 
@@ -25,7 +26,8 @@ function onHistory() {
 	hideDiv("Exercises");
 	hideDiv("Account");
 	showDiv("History");
-	resetCalendar();	
+	hideDiv("PhotoAlbum");
+	resetCalendar();
 	showHistory();
 }
 
@@ -33,16 +35,17 @@ function onAccount() {
 	hideStatus();
 	hideDiv("History");
 	hideDiv("Exercises");
+	hideDiv("PhotoAlbum");
 	showDiv("Account");
 	showAccount();
 }
-function onMealLog()
+/*function onMealLog()
 {
 	hideStatus();
 	hideDiv("History");
 	hideDiv("Exercises");
 	showDiv("MealLog");
-}
+}*/
 function onPhotoAlbum()
 {
 	hideStatus();
@@ -50,4 +53,18 @@ function onPhotoAlbum()
 	hideDiv("Exercises");
 	hideDiv("MealLog");
 	showDiv("PhotoAlbum");
+}
+
+function hideDiv(id) {
+	const element = document.getElementById(id);
+	if (element) {
+		element.style.display = "none";
+	}
+}
+
+function showDiv(id) {
+	const element = document.getElementById(id);
+	if (element) {
+		element.style.display = "block";
+	}
 }

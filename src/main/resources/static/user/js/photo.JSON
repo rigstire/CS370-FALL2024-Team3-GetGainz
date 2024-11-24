@@ -1,0 +1,8 @@
+[
+  {
+    "id": 1,
+    "name": "example.jpg",
+    "contentType": "image/jpeg",
+    "data": "BASE64_ENCODED_STRING"
+  }
+]
