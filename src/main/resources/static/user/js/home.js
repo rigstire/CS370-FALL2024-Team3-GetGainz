@@ -52,6 +52,7 @@ function onPhotoAlbum()
 	hideDiv("History");
 	hideDiv("Exercises");
 	hideDiv("MealLog");
+	hideDiv("Account");
 	showDiv("PhotoAlbum");
 }
 
