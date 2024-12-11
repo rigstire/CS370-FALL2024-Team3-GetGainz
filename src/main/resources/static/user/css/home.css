@@ -1,51 +1,1211 @@
-.icon-red {
-	color: red;
+/* General Styles */
+body {
+	font-family: 'Segoe UI', Arial, sans-serif;
+	background-color: #f5f5f5 !important;
+	color: #333;
+	margin: 0;
+	padding: 20px;
+	min-height: 100vh;
+	background-image: url('https://t4.ftcdn.net/jpg/01/30/39/43/360_F_130394395_7FSUsAaybwtBe3hBXx9xcffIYkWEQbaO.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
 }
 
-.icon-grey {
-	color: grey;
+/* Header Styles */
+h1.display-1 {
+	font-weight: 700;
+	color: #4a4a4a;
+	text-align: center;
+	margin: 20px 0 30px;
+	font-size: 3.5rem;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.icon-green {
-	color: green;
+/* Navbar Styles */
+.navbar {
+	border-radius: 10px;
+	margin-bottom: 30px !important;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	background-color: #f0f0f0 !important;
 }
 
-.icon-orange {
-	color: orange;
+.navbar-logo {
+	font-size: 1.8rem;
+	font-weight: bold;
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+	margin-right: auto;
 }
 
-#PhotoAlbum {
-	display: block; /* Change this for testing */
+.navbar-content {
+	display: flex;
+	align-items: center;
+	gap: 20px;
 }
 
-#album {
+.navbar-text {
+	color: rgba(255, 255, 255, 0.9) !important;
+	font-weight: 500;
+}
+
+.menu-buttons {
+	display: flex;
+	gap: 15px;
+}
+
+.menu-buttons button {
+	background-color: #616161; /* Dark gray for buttons */
+	color: white;
+	border: none;
+	padding: 10px 15px;
+	border-radius: 5px;
+	cursor: pointer;
+	text-align: center;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu-buttons button:hover {
+	background-color: #212121; /* Black on hover */
+	transform: scale(1.05); /* Slight zoom for interaction */
+}
+
+/* Space below navbar to avoid content overlap */
+.navbar-space {
+	height: 75px;
+}
+
+/* Card Styles */
+.card {
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	margin-bottom: 30px;
+	background-color: white;
+}
+
+.card-header {
+	background-color: #1a73e8;
+	color: white;
+	font-weight: 600;
+	padding: 15px 20px;
+	border-radius: 15px 15px 0 0 !important;
+	border-bottom: none;
+}
+
+.card-body {
+	padding: 25px;
+}
+
+/* Form Styles */
+.form-inline {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 10px;
 	justify-content: center;
+	gap: 10px;
 }
 
-#album .photo {
+.form-group {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 10px 0;
+}
+
+.form-control {
+	border: 1px solid #e0e0e0;
+	border-radius: 8px;
+	padding: 10px 15px;
+	transition: all 0.2s ease;
+}
+
+.form-control:focus {
+	border-color: #1a73e8;
+	box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+}
+
+/* Table Styles */
+.table {
+	margin-top: 20px;
+	font-size: 14px !important;
+	width: 90% !important;
+	margin: 0 auto !important;
+}
+
+.table th, .table td {
+	padding: 8px !important;
+	border: 1px solid #ddd;
+	text-align: center !important;
+}
+
+.table th {
+	background-color: #eeeeee; /* Light gray for table header */
+	color: #616161; /* Dark gray text */
+}
+
+.table tr:hover {
+	background-color: #f5f5f5; /* Slightly darker gray on hover */
+}
+
+/* Calendar Controls */
+.calendar-controls {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+.calendar-controls button {
+	background-color: #424242;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+.calendar-controls button:hover {
+	background-color: #212121;
+}
+
+/* Photo Album */
+.photo-album {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 15px;
+}
+
+.photo-album .photo {
 	width: 150px;
 	height: 150px;
-	border: 2px solid #ddd;
 	border-radius: 5px;
 	overflow: hidden;
+	border: 2px solid #ddd;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-#album .photo img {
+.photo-album img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
 
-/* Ensure visibility of active sections */
-#PhotoAlbum.section-active {
-	display: block !important;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+	body {
+		padding: 10px;
+	}
+
+	h1.display-1 {
+		font-size: 2.5rem;
+	}
+
+	.card-body {
+		padding: 15px;
+	}
+
+	.navbar .btn-primary {
+		margin: 5px 0;
+		width: 100%;
+	}
 }
-@media (max-width: 1080px) {
-.navbar-collapse
-    {        
+
+/* Navbar Centering */
+.navbar .container-fluid {
+	justify-content: center;
+	gap: 20px;
+}
+
+.navbar-collapse {
+	justify-content: center;
+	flex-grow: 0;
+}
+
+.navbar-nav {
+	align-items: center;
+}
+
+/* Card Width Control */
+.col-xl-5 {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+/* Form Centering */
+.d-flex {
+	justify-content: center;
+	gap: 10px;
+}
+
+/* Table Centering */
+.table {
+	max-width: 800px;
+	margin: 20px auto;
+}
+
+/* Calendar Controls */
+#calendar-box {
+	justify-content: center;
+	gap: 15px;
+	margin: 20px auto;
+	max-width: 400px;
+}
+
+/* Form Groups */
+.form-group, .mt-3 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 10px auto;
+	max-width: 400px;
+}
+
+/* Input Groups */
+.input-group {
+	justify-content: center;
+	margin: 0 auto;
+}
+
+/* Labels and Inputs Alignment */
+.form-label {
+	text-align: center;
+	margin-bottom: 5px;
+	font-size: 14px !important;
+}
+
+/* Photo Album Grid */
+#album {
+	justify-content: center;
+	margin: 0 auto;
+	max-width: 800px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.navbar .container-fluid {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.navbar-nav {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.col-xl-5 {
+		padding: 0 15px;
+	}
+}
+
+/* Logged in user navbar styles */
+#logged-in-name {
+    color: #4a4a4a;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-right: 20px;
+    white-space: nowrap;
+}
+
+/* Adjust navbar layout */
+.navbar .container-fluid {
+    justify-content: center;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-collapse {
+    display: flex !important;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Make sure navbar text stays visible on mobile */
+@media (max-width: 768px) {
+    #logged-in-name {
+        margin: 10px 0;
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+
+    .navbar-collapse {
+        flex-direction: column;
+    }
+}
+
+/* Exercise Input Form Styling */
+#new-history-form {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Exercise Selection Row */
+.d-flex.align-items-center {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+/* Labels */
+.form-label {
+    font-weight: 500;
+    color: #4a4a4a;
+    margin-bottom: 5px;
+    min-width: 80px;
+}
+
+/* Select and Input Fields */
+#exercise-select {
+    flex: 1;
+    min-width: 200px;
+    max-width: 400px;
+    padding: 8px 12px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    background-color: white;
+    max-width: 300px !important;
+}
+
+#weight, #reps {
+    width: 120px;
+    padding: 8px 12px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Add Button */
+#new-history-form button[type="submit"] {
+    background-color: #1a73e8;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    margin-top: 15px;
+    transition: all 0.2s ease;
+    padding: 5px 20px !important;
+    font-size: 14px !important;
+}
+
+#new-history-form button[type="submit"]:hover {
+    background-color: #1557b0;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Calendar Navigation */
+#calendar-box {
+    background-color: white;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 20px auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    max-width: 400px;
+}
+
+#calendar {
+    padding: 8px 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.bi-arrow-left-square-fill,
+.bi-arrow-right-square-fill {
+    color: #1a73e8;
+    transition: transform 0.2s ease;
+}
+
+.bi-arrow-left-square-fill:hover,
+.bi-arrow-right-square-fill:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #new-history-form {
+        padding: 15px;
+    }
+
+    .d-flex.align-items-center {
+        flex-direction: column;
+        align-items: stretch !important;
+    }
+
+    #exercise-select {
+        width: 100%;
+        max-width: none;
+    }
+
+    #weight, #reps {
+        width: 100%;
+    }
+
+    .form-label {
         text-align: center;
     }
+}
+
+/* Photo Upload Form */
+#photo-upload-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+#fileInput {
+    max-width: 400px;
+}
+
+#uploadButton {
+    min-width: 100px;
+}
+
+/* Workout Form Container */
+#new-history-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Exercise Selection and Input Fields */
+#new-history-form .d-flex {
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+#exercise-select {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Weight and Reps Container */
+.d-flex.mt-2 {
+    justify-content: center !important;
+}
+
+/* Add Button Container */
+#new-history-form button[type="submit"] {
+    margin: 20px auto 0;
+    min-width: 120px;
+}
+
+/* Calendar Controls */
+#calendar-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+#calendar {
+    text-align: center;
+    width: 150px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #photo-upload-form,
+    #new-history-form,
+    #calendar-box {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    #new-history-form .d-flex {
+        flex-direction: column;
+    }
+
+    #exercise-select,
+    #weight,
+    #reps {
+        width: 100%;
+    }
+
+    .d-flex.mt-2 {
+        flex-direction: column;
+    }
+
+    .d-flex.mt-2 label {
+        margin-bottom: 5px;
+    }
+}
+
+/* Color Variables */
+:root {
+    --primary-gray: #4a4a4a;
+    --light-gray: #f0f0f0;
+    --hover-gray: #5a6268;
+    --button-gray: #6c757d;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--button-gray) !important;
+    border-color: var(--button-gray) !important;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--hover-gray) !important;
+    border-color: var(--hover-gray) !important;
+    transform: translateY(-1px);
+}
+
+/* Links and Icons */
+a, .icon-orange {
+    color: var(--primary-gray) !important;
+}
+
+a:hover, .icon-orange:hover {
+    color: var(--hover-gray) !important;
+}
+
+/* Calendar Arrows */
+.bi-arrow-left-square-fill,
+.bi-arrow-right-square-fill {
+    color: var(--primary-gray) !important;
+}
+
+/* Form Focus States */
+.form-control:focus {
+    border-color: var(--button-gray) !important;
+    box-shadow: 0 0 0 2px rgba(74, 74, 74, 0.2) !important;
+}
+
+/* Table Headers and Borders */
+.table thead th {
+    background-color: var(--light-gray);
+    color: var(--primary-gray);
+}
+
+/* Action Icons */
+.bi-pencil-fill,
+.bi-trash-fill {
+    color: var(--primary-gray);
+}
+
+/* Calendar Box */
+#calendar-box {
+    border: 1px solid var(--light-gray);
+}
+
+#calendar-box i {
+    color: var(--primary-gray) !important;
+}
+
+/* Add Button */
+#new-history-form button[type="submit"],
+#photo-upload-form button[type="submit"],
+.btn-primary {
+    background-color: var(--button-gray);
+    border-color: var(--button-gray);
+}
+
+#new-history-form button[type="submit"]:hover,
+#photo-upload-form button[type="submit"]:hover,
+.btn-primary:hover {
+    background-color: var(--hover-gray);
+    border-color: var(--hover-gray);
+}
+
+/* Selection Highlight */
+::selection {
+    background-color: var(--light-gray);
+    color: var(--primary-gray);
+}
+
+/* Focus Outline */
+*:focus {
+    outline-color: var(--primary-gray) !important;
+}
+
+/* Status Messages */
+.text-primary {
+    color: var(--primary-gray) !important;
+}
+
+/* Any Bootstrap Override Classes */
+.bg-primary {
+    background-color: var(--primary-gray) !important;
+}
+
+.border-primary {
+    border-color: var(--primary-gray) !important;
+}
+
+/* Link Hover States */
+a:hover {
+    color: var(--hover-gray);
+}
+
+/* Override Bootstrap's primary color for all elements */
+.bg-primary,
+.btn-primary,
+.navbar-dark.bg-primary,
+.card-header,
+#History,
+#PhotoAlbum,
+#Account,
+#Exercises,
+.History,
+[class*="bg-primary"] {
+    background-color: #4a4a4a !important;
+}
+
+/* Specifically target the History header and similar section headers */
+#History > div:first-child,
+#PhotoAlbum > div:first-child,
+#Account > div:first-child,
+#Exercises > div:first-child,
+.container-fluid > div:first-child {
+    background-color: #4a4a4a !important;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Target any remaining blue elements */
+.text-primary,
+.btn-outline-primary {
+    color: #4a4a4a !important;
+}
+
+.border-primary {
+    border-color: #4a4a4a !important;
+}
+
+/* Header text colors */
+#History,
+#PhotoAlbum,
+#Account,
+#Exercises,
+.History,
+.card-header {
+    background-color: #4a4a4a !important;
+    color: white !important;  /* Keep header text white */
+}
+
+/* Content text colors */
+.form-label,
+.table th,
+.table td,
+#exercise-select,
+select,
+input,
+.navbar-text,
+#logged-in-name {
+    color: #333 !important; /* Dark gray for content text */
+}
+
+/* Table header styling */
+.table thead th {
+    background-color: #f0f0f0 !important; /* Light gray background */
+    color: #333 !important; /* Dark text for contrast */
+}
+
+/* Calendar and form text */
+#calendar,
+.form-control,
+.select-control {
+    color: #333 !important;
+}
+
+/* Action icons */
+.bi-pencil-fill,
+.bi-trash-fill {
+    color: #4a4a4a !important;
+}
+
+/* Make sure all content text is visible */
+.card-body {
+    color: #333 !important;
+}
+
+/* Card and content area styling */
+.card,
+.container-fluid {
+    background-color: white !important;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Remove the dark gray background from outer container */
+.container-fluid > .row > div {
+    background-color: transparent !important;
+}
+
+/* Keep headers gray but adjust the shade */
+#History,
+#PhotoAlbum,
+#Account,
+#Exercises,
+.History,
+.card-header {
+    background-color: #4a4a4a !important;
+    color: white !important;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Content area background */
+.card-body {
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Table styling */
+.table {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Reset all background colors first */
+body,
+.container-fluid,
+.row,
+.col,
+.card,
+#History,
+#PhotoAlbum,
+#Account,
+#Exercises {
+    background-color: #f5f5f5 !important;
+}
+
+/* Main content area */
+.container-fluid > .row > div > div {
+    background-color: white !important;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+/* Only keep gray for the specific headers */
+.card-header,
+#History > div:first-child,
+#PhotoAlbum > div:first-child,
+#Account > div:first-child,
+#Exercises > div:first-child {
+    background-color: #4a4a4a !important;
+    color: white !important;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Content areas */
+.card-body {
+    background-color: white !important;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Remove any remaining dark backgrounds */
+.rounded-top,
+.rounded-bottom {
+    background-color: transparent !important;
+}
+
+/* Reset the dark background */
+.rounded-top.rounded-bottom,
+.rounded-top.rounded-bottom > div,
+.container-fluid,
+.row,
+.col,
+body,
+#main-content,
+.card-container {
+    background-color: #f5f5f5 !important;
+}
+
+/* Target the specific dark background container */
+.container-fluid > .row > div > .rounded-top.rounded-bottom {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Style the main content area */
+.card {
+    background-color: white !important;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin: 20px;
+}
+
+/* Header styling */
+.card-header,
+#History > div:first-child {
+    background-color: #4a4a4a !important;
+    color: white !important;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Content area */
+.card-body {
+    background-color: white !important;
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+}
+
+/* Override any Bootstrap background classes */
+[class*="bg-"] {
+    background-color: transparent !important;
+}
+
+/* Ensure the main container is transparent */
+.container-fluid > .row > div {
+    background: none !important;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.8); /* semi-transparent white background */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Target the specific container causing the gray background */
+.rounded-top.rounded-bottom,
+.container-fluid > .row > div > .rounded-top.rounded-bottom,
+.container-fluid > .row > div {
+    background-color: transparent !important;
+    background: none !important;
+    box-shadow: none !important;
+}
+
+/* Main content styling */
+.card {
+    background-color: white !important;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin: 20px;
+}
+
+/* Header styling */
+.card-header {
+    background-color: #4a4a4a !important;
+    color: white !important;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Content area */
+.card-body {
+    background-color: white !important;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Force remove background from outer container */
+#outer-container,
+.main-wrapper,
+.content-wrapper {
+    background: none !important;
+    background-color: transparent !important;
+}
+
+/* Body background */
+body {
+    background-color: #f5f5f5 !important;
+}
+
+/* Remove background from History header */
+.card-header,
+#History,
+#History > div:first-child,
+.History {
+    background: none !important;
+    background-color: transparent !important;
+    color: #333 !important; /* Dark gray text for better visibility */
+}
+
+/* Keep other styles */
+.card {
+    background-color: white !important;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin: 20px;
+}
+
+.card-body {
+    background-color: white !important;
+    border-radius: 10px;
+}
+
+/* Remove any remaining backgrounds */
+.rounded-top.rounded-bottom,
+.container-fluid > .row > div > .rounded-top.rounded-bottom,
+.container-fluid > .row > div {
+    background: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Remove background from all section headers */
+.card-header,
+#History,
+#PhotoAlbum,
+#Account,
+#Exercises,
+.History,
+#History > div:first-child,
+#PhotoAlbum > div:first-child,
+#Account > div:first-child,
+#Exercises > div:first-child,
+[class*="-header"] {
+    background: none !important;
+    background-color: transparent !important;
+    color: #333 !important;
+    border: none !important;
+    box-shadow: none;
+}
+
+/* Style specifically for History header */
+#History,
+#History > div:first-child,
+.History,
+div:has(> .History) {
+    background: none !important;
+    background-color: transparent !important;
+    color: #333 !important;
+    border: none !important;
+    box-shadow: none !important;
+    text-align: center !important;     /* Center the text */
+    font-size: 24px !important;        /* Larger font size */
+    font-weight: bold !important;      /* Make it bold */
+    padding: 15px 0 !important;        /* Add some vertical padding */
+    text-transform: uppercase !important;
+}
+
+/* Keep other headers normal */
+.card-header,
+#PhotoAlbum,
+#Account,
+#Exercises,
+#PhotoAlbum > div:first-child,
+#Account > div:first-child,
+#Exercises > div:first-child {
+    background: none !important;
+    background-color: transparent !important;
+    color: #333 !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Keep other styles the same */
+.card {
+    background-color: white !important;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin: 20px;
+}
+
+.card-body {
+    background-color: white !important;
+    border-radius: 10px;
+}
+
+/* Remove any remaining backgrounds */
+.rounded-top.rounded-bottom,
+.container-fluid > .row > div > .rounded-top.rounded-bottom,
+.container-fluid > .row > div {
+    background: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Adjust table and text sizes */
+.table {
+    font-size: 14px !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+}
+
+.table th,
+.table td {
+    padding: 8px !important;
+    text-align: center !important;
+}
+
+/* Adjust form labels and inputs */
+.form-label,
+.form-control {
+    font-size: 14px !important;
+}
+
+/* Make select dropdown and inputs smaller */
+select.form-control,
+input.form-control {
+    height: 35px !important;
+    padding: 5px 10px !important;
+}
+
+/* Adjust the exercise selection area */
+#exercise-select {
+    max-width: 300px !important;
+}
+
+/* Make the Add button smaller */
+.btn {
+    padding: 5px 20px !important;
+    font-size: 14px !important;
+}
+
+/* Adjust spacing */
+.card-body {
+    padding: 15px !important;
+}
+
+/* Make headers smaller */
+.card-header,
+#History {
+    font-size: 20px !important;
+    padding: 10px 0 !important;
+}
+
+/* Style all section headers */
+.card-header,
+#History,
+#PhotoAlbum,
+#Account,
+#Exercises,
+.History,
+#History > div:first-child,
+#PhotoAlbum > div:first-child,
+#Account > div:first-child,
+#Exercises > div:first-child,
+[class*="-header"] {
+    background: none !important;
+    background-color: transparent !important;
+    color: #333 !important;
+    border: none !important;
+    box-shadow: none !important;
+    text-align: center !important;     /* Center all headers */
+    font-size: 20px !important;        /* Consistent smaller size */
+    font-weight: bold !important;
+    padding: 10px 0 !important;
+    text-transform: uppercase !important;
+}
+
+/* Keep table and form styling compact */
+.table {
+    font-size: 14px !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+}
+
+.table th,
+.table td {
+    padding: 8px !important;
+    text-align: center !important;
+}
+
+/* Form elements */
+.form-label,
+.form-control {
+    font-size: 14px !important;
+}
+
+select.form-control,
+input.form-control {
+    height: 35px !important;
+    padding: 5px 10px !important;
+}
+
+#exercise-select {
+    max-width: 300px !important;
+}
+
+.btn {
+    padding: 5px 20px !important;
+    font-size: 14px !important;
+}
+
+.card-body {
+    padding: 15px !important;
+    background-color: white !important;
+    border-radius: 10px;
+}
+
+/* Remove backgrounds */
+.rounded-top.rounded-bottom,
+.container-fluid > .row > div > .rounded-top.rounded-bottom,
+.container-fluid > .row > div {
+    background: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Navigation Buttons */
+.navbar .btn,
+.Calender,
+.Log.WorkOut,
+.Photo.Album,
+.Profile,
+.Logout {
+    background-color: #4a4a4a !important;
+    border: none !important;
+    color: white !important;
+    border-radius: 5px !important;
+    padding: 5px 15px !important;
+    margin: 0 3px !important;
+    font-size: 14px !important;
+    text-decoration: none !important;
+}
+
+.navbar .btn:hover,
+.Calender:hover,
+.Log.WorkOut:hover,
+.Photo.Album:hover,
+.Profile:hover,
+.Logout:hover {
+    opacity: 0.9 !important;
+}
+
+/* Remove Backgrounds */
+.rounded-top.rounded-bottom, .container-fluid > .row > div {
+    background: none !important;
+}
+
+/* Remove white background */
+.card, .card-body {
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Keep the HISTORY title */
+.card-header {
+    background: none !important;
+    border: none !important;
+    color: #333 !important;
+    font-weight: bold !important;
 }
