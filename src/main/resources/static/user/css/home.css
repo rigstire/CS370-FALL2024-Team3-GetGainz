@@ -1209,3 +1209,10 @@ input.form-control {
     color: #333 !important;
     font-weight: bold !important;
 }
+
+/* Target everything with !important */
+* {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}

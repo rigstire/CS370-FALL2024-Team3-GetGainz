@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert(await response.text());
                 loadPhotos(); // Reload the album
             } else {
-                alert("Upload failed.");
+                alert("Upload failed due to incorrect file upload or the size is too large.");
             }
         } catch (error) {
             console.error(error);
