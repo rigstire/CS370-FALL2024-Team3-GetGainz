@@ -66,13 +66,13 @@ form {
 
 .form-control:focus {
     outline: none;
-    border-color: #007bff; /* Blue focus border */
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); /* Subtle glow on focus */
+    border-color: #4d5153; /* Blue focus border */
+    box-shadow: 0 0 8px rgba(76, 83, 92, 0.3); /* Subtle glow on focus */
 }
 
 /* Button Styling */
 button {
-    background-color: #007bff; /* Primary blue color */
+    background-color: #494b53; /* Primary blue color */
     color: white;
     border: none;
     border-radius: 8px;
@@ -83,13 +83,13 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #393d40; /* Darker blue on hover */
     transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 /* Link Styling */
 a {
-    color: #007bff; /* Blue links */
+    color: #43464c; /* Blue links */
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.2s ease;
@@ -97,17 +97,18 @@ a {
 
 a:hover {
     text-decoration: underline;
-    color: #0056b3; /* Darker blue on hover */
+    color: #44484e; /* Darker blue on hover */
 }
 
 /* Status Message */
 #status-message {
-    color: red; /* Display errors or warnings in red */
+    color: #56ff00; /* Display errors or warnings in red */
     font-size: 0.9rem;
     margin-top: 15px;
 }
 
 /* Responsive Design */
+
 @media (max-width: 576px) {
     h1.display-1 {
         font-size: 2.5rem;
