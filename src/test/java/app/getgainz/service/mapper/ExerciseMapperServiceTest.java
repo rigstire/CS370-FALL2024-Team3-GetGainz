@@ -46,7 +46,7 @@ class ExerciseMapperServiceTest {
 		}
 		
 		@Test
-		void appUserNotFound_throwFitBuddyException() {
+		void appUserNotFound_throwGetGainzException() {
 			ExerciseRequestDTO requestDTO = new ExerciseRequestDTO("name", 1);
 			
 			when(appUserRepository.findById(anyInt())).thenReturn(Optional.empty());

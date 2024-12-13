@@ -52,7 +52,7 @@ class AppUserMapperServiceTest {
 		}
 
 		@Test
-		void roleNotFound_throwFitBuddyException() {
+		void roleNotFound_throwGetGainzException() {
 			AppUserRequestDTO requestDTO = new AppUserRequestDTO("name", "password", "roleName");
 					
 			when(roleRepository.findByName(anyString())).thenReturn(Optional.empty());
@@ -151,7 +151,7 @@ class AppUserMapperServiceTest {
 		}
 
 		@Test
-		void roleNotFound_throwFitBuddyException() {
+		void roleNotFound_throwGetGainzException() {
 			AppUser appUser = AppUserTestHelper.getMockAppUser(1, "name", "password");
 			AppUserUpdateDTO updateDTO = new AppUserUpdateDTO("name", "newRoleName");
 

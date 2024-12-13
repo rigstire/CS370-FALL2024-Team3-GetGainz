@@ -27,7 +27,7 @@ class RegisterServiceTest {
 	@Mock	RoleCrudService	roleCrudService;
 	
 	@Test
-	void register_whenNameAlreadyExists_shouldThrowFitBuddyException() {
+	void register_whenNameAlreadyExists_shouldThrowGetGainzException() {
 		AppUserResponseDTO appUserResponseDTO = new AppUserResponseDTO(1, "name", "password", "roleName");
 		
 		when(appUserCrudService.readByName(anyString())).thenReturn(appUserResponseDTO);
@@ -36,7 +36,7 @@ class RegisterServiceTest {
 	}
 	
 	@Test
-	void register_whenUserRoleDoesntExists_shouldThrowFitBuddyException() {
+	void register_whenUserRoleDoesntExists_shouldThrowGetGainzException() {
 		
 		when(appUserCrudService.readByName(anyString())).thenReturn(null);
 		when(roleCrudService.readByName(anyString())).thenReturn(null);

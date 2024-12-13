@@ -54,7 +54,7 @@ class HistoryMapperServiceTest {
 		}
 
 		@Test
-		void appUserNotFound_throwFitBuddyException() {
+		void appUserNotFound_throwGetGainzException() {
 			HistoryRequestDTO requestDTO = new HistoryRequestDTO(1, "exerciseName", 11, 111, "2022-01-01");
 
 			when(appUserRepository.findById(anyInt())).thenReturn(Optional.empty());

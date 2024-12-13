@@ -45,7 +45,7 @@ class ExerciseCrudServiceTest {
 		}
 		
 		@Test
-		void nameAlreadyExists_throwFitBuddyException() {
+		void nameAlreadyExists_throwGetGainzException() {
 			ExerciseRequestDTO requestDTO = new ExerciseRequestDTO("exerciseName", 11);
 			Exercise exercise = ExerciseTestHelper.getMockExercise();
 			
@@ -108,7 +108,7 @@ class ExerciseCrudServiceTest {
 		}
 		
 		@Test
-		void nameAlreadyExists_throwFitBuddyException() {
+		void nameAlreadyExists_throwGetGainzException() {
 			ExerciseUpdateDTO updateDTO = new ExerciseUpdateDTO("newExerciseName");
 			Exercise exercise = ExerciseTestHelper.getMockExercise();
 		

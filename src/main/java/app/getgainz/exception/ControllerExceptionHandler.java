@@ -31,7 +31,7 @@ public class ControllerExceptionHandler extends ResponseEntityExceptionHandler {
 	
 	@ExceptionHandler(GetGainzException.class)
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
-	public ResponseEntity<Object> handleFitBuddyException(GetGainzException ex) {
+	public ResponseEntity<Object> handleGetGainzException(GetGainzException ex) {
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());		
 	}
 	

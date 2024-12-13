@@ -32,7 +32,7 @@ class LoginServiceTest {
 	BCryptPasswordEncoder bCryptPasswordEncoder;
 	
 	@Test
-	void usernameNotFound_throwFitBuddyException() {
+	void usernameNotFound_throwGetGainzException() {
 		LoginDTO loginDtoMock = new LoginDTO("name", "password");
 		when(appUserRepository.findByName(anyString())).thenReturn(Optional.empty());
 
@@ -40,7 +40,7 @@ class LoginServiceTest {
 	}
 	
 	@Test
-	void passwordDoesntMatch_throwFitBuddyException() {
+	void passwordDoesntMatch_throwGetGainzException() {
 		AppUser appUser = AppUserTestHelper.getMockAppUser();
 		LoginDTO loginDtoMock = new LoginDTO("name", "incorrectPassword");
 		when(appUserRepository.findByName(anyString())).thenReturn(Optional.of(appUser));

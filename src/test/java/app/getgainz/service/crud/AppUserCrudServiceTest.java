@@ -45,7 +45,7 @@ class AppUserCrudServiceTest {
 		}
 		
 		@Test
-		void nameAlreadyExists_throwFitBuddyException() {
+		void nameAlreadyExists_throwGetGainzException() {
 			AppUserRequestDTO appUserRequestDTO = new AppUserRequestDTO("name", "password", "roleName");
 			AppUser appUser = AppUserTestHelper.getMockAppUser();
 			
@@ -119,7 +119,7 @@ class AppUserCrudServiceTest {
 		}
 		
 		@Test
-		void nameAlreadyExists_throwFitBuddyException() {
+		void nameAlreadyExists_throwGetGainzException() {
 			AppUserUpdateDTO updateDTO = new AppUserUpdateDTO("name", "roleName");			
 			AppUser appUser = AppUserTestHelper.getMockAppUser();
 			

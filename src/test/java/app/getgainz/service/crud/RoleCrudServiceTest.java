@@ -45,7 +45,7 @@ class RoleCrudServiceTest {
 		}
 		
 		@Test
-		void nameAlreadyExists_throwFitBuddyException() {
+		void nameAlreadyExists_throwGetGainzException() {
 			RoleRequestDTO requestDTO = new RoleRequestDTO("roleName");
 			Role role = RoleTestHelper.getMockRole();
 			
@@ -119,7 +119,7 @@ class RoleCrudServiceTest {
 		}
 		
 		@Test
-		void nameAlreadyExists_throwFitBuddyException() {
+		void nameAlreadyExists_throwGetGainzException() {
 			RoleUpdateDTO updateDTO = new RoleUpdateDTO("newRoleName");
 			Role role = RoleTestHelper.getMockRole();
 			
